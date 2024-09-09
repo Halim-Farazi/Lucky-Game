@@ -13,10 +13,15 @@
   //data store
   let p1Score = 0;
   let p2Score = 0;
-  let winningScore = 5;
   let gameOver = false;
   let p1Turn = true;
   let p2Turn = false;
+
+  //Set initial winning score  a random value rather than default value
+  const minScore = 10;
+  const maxScore = 30;
+  let winningScore =
+    Math.floor(Math.random() * (maxScore - minScore + 1)) + minScore;
 
   function setIntialPlayer() {
     const player = randomPlayerSelection();
